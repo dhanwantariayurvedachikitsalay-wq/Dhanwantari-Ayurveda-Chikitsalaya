@@ -32,23 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-// Mobile Menu
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const body = document.body;
+    // Mobile Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    body.classList.toggle('menu-open'); // Add this line
-});
-
-// Close menu when clicking link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        body.classList.remove('menu-open'); // Add this line
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
     });
-});
+
+    // Close menu when clicking link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
 
     // Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
