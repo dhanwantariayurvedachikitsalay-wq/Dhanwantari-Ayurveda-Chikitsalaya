@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga & Ayurveda | Dhanwantari Ayurveda Chikitsalaya</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --forest-green: #1B4332;
+            --gold: #B79555;
+            --cream: #F9F7F2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--forest-green); line-height: 1.8; }
+
+        /* Hero Section */
+        .detail-hero {
+            height: 65vh;
+            background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(27, 67, 50, 0.7)), 
+                        url('image/23.jpg'); /* Recommended image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .detail-hero-content h1 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 4.5rem; 
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .detail-hero-content p { 
+            font-size: 1.1rem; 
+            letter-spacing: 2px; 
+            text-transform: none;
+            opacity: 0.9;
+        }
+
+        /* Content Container */
+        .detail-content {
+            padding: 80px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Back Link */
+        .back-link {
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Main Serif Heading */
+        .main-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            color: var(--forest-green);
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            color: #444;
+        }
+
+        /* Content Paragraphs */
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .point-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--forest-green);
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .point-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .content-section p, .content-section li {
+            font-size: 1.15rem;
+            color: #444;
+            margin-top: 25px;
+            text-align: justify;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-section ul li {
+            margin-top: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .content-section ul li::before {
+            content: '•';
+            color: var(--gold);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Routine Box */
+        .routine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .routine-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 3px solid var(--gold);
+        }
+        .routine-item strong { color: var(--forest-green); display: block; margin-bottom: 5px; }
+
+        /* Conclusion Box */
+        .conclusion-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--gold);
+            margin-top: 80px;
+        }
+
+        .conclusion-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--forest-green);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer {
+            padding: 40px;
+            text-align: center;
+            background: var(--forest-green);
+            color: white;
+            margin-top: 80px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .detail-hero-content h1 { font-size: 3rem; }
+            .main-heading { font-size: 2.5rem; }
+            .detail-content { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="detail-hero">
+        <div class="detail-hero-content">
+            <h1>Yoga & Ayurveda</h1>
+            <p>A Perfect Combination for Holistic Health</p>
+        </div>
+    </section>
+
+    <div class="detail-content">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <h2 class="main-heading">Achieving True Balance</h2>
+        <p class="intro-text">
+            In today’s fast-paced world, achieving true health goes beyond just treating symptoms—it requires a balance of body, mind, and spirit. This is where the timeless wisdom of Yoga and Ayurveda comes together as a powerful combination. Rooted in ancient Indian traditions, both systems aim to promote natural healing and overall well-being.
+        </p>
+
+        <!-- 1 -->
+        <div class="content-section">
+            <h3 class="point-title">1. Personalized Wellness Approach</h3>
+            <p>
+                Ayurveda identifies your body type (dosha), and Yoga complements it with specific practices. For example:
+            </p>
+            <ul>
+                <li><strong>Vata types:</strong> benefit from calming, grounding yoga.</li>
+                <li><strong>Pitta types:</strong> need cooling and relaxing practices.</li>
+                <li><strong>Kapha types:</strong> benefit from dynamic and energizing yoga.</li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="content-section">
+            <h3 class="point-title">2. Detoxification and Cleansing</h3>
+            <p>
+                Ayurveda focuses on removing toxins (Ama) through therapies like Panchakarma, while Yoga supports detox through twists, stretches, and deep breathing that improve circulation and digestion.
+            </p>
+        </div>
+
+        <!-- 3 -->
+        <div class="content-section">
+            <h3 class="point-title">3. Mental and Emotional Balance</h3>
+            <p>
+                Yoga calms the mind, while Ayurveda supports mental health through herbs, diet, and lifestyle. Together, they reduce stress, anxiety, and improve emotional stability.
+            </p>
+        </div>
+
+        <!-- 4 -->
+        <div class="content-section">
+            <h3 class="point-title">4. Improved Digestion and Metabolism</h3>
+            <p>
+                Ayurveda emphasizes digestive fire (Agni), and Yoga enhances it through specific asanas like twists and forward bends, helping better nutrient absorption.
+            </p>
+        </div>
+
+        <!-- 5 -->
+        <div class="content-section">
+            <h3 class="point-title">5. Preventive Healthcare</h3>
+            <p>
+                Both systems focus on prevention rather than cure. Regular practice strengthens immunity, balances hormones, and keeps diseases at bay.
+            </p>
+        </div>
+
+        <!-- Routine Section -->
+        <div class="content-section">
+            <h3 class="point-title">Daily Routine (Dinacharya)</h3>
+            <div class="routine-grid">
+                <div class="routine-item">
+                    <strong>Morning</strong>
+                    Start with warm water, followed by gentle yoga and pranayama.
+                </div>
+                <div class="routine-item">
+                    <strong>Midday</strong>
+                    Eat a balanced Ayurvedic meal suited to your specific dosha.
+                </div>
+                <div class="routine-item">
+                    <strong>Evening</strong>
+                    Practice light yoga or meditation to relax your mind.
+                </div>
+                <div class="routine-item">
+                    <strong>Night</strong>
+                    Follow a calming routine with herbal drinks and proper sleep.
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Benefits List -->
+        <div class="content-section">
+            <h3 class="point-title">Key Benefits</h3>
+            <ul>
+                <li>Enhances physical strength and flexibility</li>
+                <li>Improves digestion and metabolism</li>
+                <li>Reduces stress and anxiety</li>
+                <li>Boosts immunity naturally</li>
+                <li>Promotes long-term health and longevity</li>
+            </ul>
+        </div>
+
+        <!-- Conclusion Box -->
+        <div class="conclusion-card">
+            <h3>🧘 Final Thoughts</h3>
+            <p>
+                Yoga and Ayurveda are not just practices—they are a way of life. When combined, they create a complete system of healing that nurtures both body and mind. By incorporating these ancient sciences into your daily routine, you can achieve a balanced, healthy, and peaceful life naturally. If you’re looking for a sustainable and holistic approach to wellness, the path starts here.
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dhanwantari Ayurveda Chikitsalaya. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

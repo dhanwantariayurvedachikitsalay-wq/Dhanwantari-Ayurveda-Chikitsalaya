@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Skincare & Hair Treatment | Dhanwantari Ayurveda Chikitsalaya</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Tick Marks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --forest-green: #1B4332;
+            --gold: #B79555;
+            --cream: #F9F7F2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--forest-green); line-height: 1.8; }
+
+        /* Hero Section */
+        .detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(27,67,50,0.7), rgba(27,67,50,0.7)), url('image/24.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .detail-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; }
+
+        .detail-content {
+            padding: 80px 10%;
+            max-width: 1300px;
+            margin: 0 auto;
+            min-height: 400px;
+        }
+
+        .back-link {
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .intro-section h2 {
+            color: var(--forest-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .intro-section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .check-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 40px;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+            display: flex;
+            align-items: center;
+        }
+
+        .check-list li::before {
+            content: "\f00c"; 
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background-color: var(--gold);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        .footer {
+            padding: 40px 20px;
+            text-align: center;
+            background: var(--forest-green);
+            color: white;
+            width: 100%;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 992px) {
+            .check-list { grid-template-columns: 1fr; }
+            .detail-hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="detail-hero">
+        <div>
+            <h1>Beauty Skincare & Hair Treatment</h1>
+            <p>Non-invasive Diagnostic Technique for Assessing Vital Energy Flow</p>
+        </div>
+    </section>
+
+    <div class="detail-content">
+        <a href="index.html#specialties" class="back-link">← Back to Specialties</a>
+        
+        <div class="intro-section">
+            <h2>Specialized Core Treatments</h2>
+            <ul class="check-list">
+                <li>Psoriasis, Acne, Eczema</li>
+                <li>Allergies, Herbal Remedies, Alopecia</li>
+                <li>Cleanser</li>
+                <li>Skin Discoloration Treatment</li>
+                <li>Hair Care Treatments - (Dandruff, Hair Loss)</li>
+                <li>Anti-Aging Therapies</li>
+            </ul>
+        </div>
+    </div> <!-- CLOSED DETAIL-CONTENT -->
+
+    <footer class="footer">
+        <p>&copy; 2026 Dhanwantari Ayurveda Chikitsalaya. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

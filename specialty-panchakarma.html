@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchakarma | Dhanwantari Ayurveda Chikitsalaya</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Tick Marks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --forest-green: #1B4332;
+            --gold: #B79555;
+            --cream: #F9F7F2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--forest-green); line-height: 1.8; }
+
+        /* Hero Section */
+        .detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(27,67,50,0.7), rgba(27,67,50,0.7)), url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .detail-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; }
+
+        /* Content Container */
+        .detail-content {
+            padding: 80px 10%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        /* Intro Paragraph Styling */
+        .intro-section {
+            margin-bottom: 60px;
+            max-width: 900px;
+        }
+        .intro-section h2 {
+            color: var(--forest-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .intro-section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #2d5a44;
+        }
+
+        /* Two Column Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            border-top: 1px solid rgba(183, 149, 85, 0.3);
+            padding-top: 50px;
+            margin-bottom: 60px;
+            align-items: center; /* Vertically center content */
+        }
+
+        /* Heading Style from Image */
+        .column-title {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--forest-green);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .column-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        /* Circular Tick List Style */
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: #444;
+            display: flex;
+            align-items: center;
+        }
+
+        /* The Gold Circle with White Tick Icon */
+        .check-list li::before {
+            content: "\f00c"; /* FontAwesome Checkmark */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background-color: var(--gold);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        /* Image Styling */
+        .side-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 20px 20px 0px rgba(183, 149, 85, 0.1); /* Aesthetic gold offset shadow */
+        }
+.footer {
+            padding: 40px;
+            text-align: center;
+            background: var(--forest-green);
+            color: white;
+            margin-top: 60px;
+        }
+        /* Responsive */
+        @media (max-width: 992px) {
+            .content-grid { grid-template-columns: 1fr; gap: 40px; }
+            .detail-hero h1 { font-size: 3rem; }
+            .detail-content { padding: 60px 5%; }
+            .side-image { height: 350px; }
+            .order-1 { order: 1; }
+            .order-2 { order: 2; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="detail-hero">
+        <div>
+            <h1>Panchakarma Therapy</h1>
+            <p>The Five Actions of Total Body Rejuvenation</p>
+        </div>
+    </section>
+
+    <div class="detail-content">
+        <a href="index.html#specialties" class="back-link">← Back to Specialties</a>
+
+        <!-- INTRO TEXT -->
+        <div class="intro-section">
+            <h2>What is Panchakarma?</h2>
+            <p>
+                Panchakarma is the cornerstone of Ayurvedic medicine. It is a unique, natural, holistic, 
+                health-giving series of therapeutic treatments that cleanse the body's deep tissues of 
+                toxins, open the subtle channels, and bring life-enhancing energy.
+            </p>
+            <p>
+                At Dhanwantari, our Panchakarma suite includes Vamana, Virechana, Basti, Nasya, and Raktamokshana, 
+                administered by certified practitioners in a serene environment.
+            </p>
+        </div>
+
+        <!-- CORE TREATMENTS & WHAT WE TREAT GRID -->
+        <div class="content-grid">
+            <div class="col">
+                <h2 class="column-title">Core Treatments</h2>
+                <ul class="check-list">
+                    <li>Vamana (Therapeutic Emesis)</li>
+                    <li>Virechana (Purgation Therapy)</li>
+                    <li>Basti (Medicated Enema)</li>
+                    <li>Nasya (Nasal Administration)</li>
+                    <li>Raktamokshana (Bloodletting)</li>
+                    <li>Deep Tissue Detoxification</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h2 class="column-title">What we treat</h2>
+                <ul class="check-list">
+                    <li>Joint Pains, Chronic Pains</li>
+                    <li>Wellness Therapy</li>
+                    <li>Sciatica, Arthritis, IBS</li>
+                    <li>Migraine, Respiratory Issues</li>
+                    <li>Detox & Destress</li>
+                    <li>Gastrointestinal Disorders</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- KEY HIGHLIGHTS WITH IMAGE -->
+        <div class="content-grid">
+            <div class="col order-2">
+                <h2 class="column-title">Key Highlights</h2>
+                <ul class="check-list">
+                    <li>Cleansing of deep tissues & toxins</li>
+                    <li>Opening of subtle energy channels</li>
+                    <li>Rejuvenation of mind and body</li>
+                    <li>Enhanced immunity and longevity</li>
+                    <li>Restoration of Dosha balance</li>
+                    <li>Management of chronic ailments</li>
+                </ul>
+            </div>
+            <div class="col order-1">
+                <!-- Replace the URL below with your actual image path -->
+                <img src="image/34.png" alt="Ayurvedic Treatment" class="side-image">
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+        <p>&copy; 2026 Dhanwantari Ayurveda Chikitsalaya. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

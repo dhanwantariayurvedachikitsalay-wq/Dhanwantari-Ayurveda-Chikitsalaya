@@ -1,0 +1,690 @@
+:root {
+    --forest-green: #1B4332;
+    --gold: #C5A059;
+    --cream: #F9F7F2;
+    --white: #ffffff;
+    --transition: 0.4s ease;
+    --nav-height: 80px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--forest-green); line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3, .logo-text { font-family: 'Cormorant Garamond', serif; }
+
+/* Navbar */
+.navbar { 
+    position: fixed; top: 0; width: 100%; z-index: 1000; height: var(--nav-height); 
+    background: rgba(27, 67, 50, 0.98); backdrop-filter: blur(10px); 
+    border-bottom: 1px solid var(--gold); display: flex; align-items: center; 
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 5%; }
+.logo-wrapper { display: flex; align-items: center; gap: 10px; }
+.nav-logo-img { height: 50px; width: auto; }
+.logo-text { color: var(--gold); font-size: 1.2rem; font-weight: 700; }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Hero Section Fix */
+/* Hero Section Fix */
+.hero { 
+    min-height: 100vh; /* Use min-height instead of fixed height */
+    padding-top: var(--nav-height); /* Space for the fixed navbar */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image/10.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content { 
+    position: relative; 
+    z-index: 10; /* Ensure content is above everything */
+    color: white; 
+    padding: 20px 10%; 
+    width: 100%;
+}
+
+.hero h1 { 
+    font-size: clamp(2.2rem, 8vw, 4rem); 
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Primary Button Styling */
+.btn-primary { 
+    display: inline-block; 
+    padding: 16px 40px; 
+    background-color: var(--gold); /* Your gold color */
+    color: #ffffff !important; /* Forces text to be white */
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-weight: 700; 
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border-radius: 50px; /* Modern pill shape */
+    transition: all 0.3s ease;
+    border: 2px solid var(--gold);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover { 
+    background-color: transparent; 
+    color: var(--gold) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
+}
+
+/* Mobile Adjustments for Hero */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh; /* Shorter on mobile but still roomy */
+    }
+    .btn-primary {
+        padding: 12px 30px;
+        font-size: 0.8rem;
+    }
+}
+
+/* About Section */
+.about-info { padding: 80px 5%; background: #fff; }
+.about-text-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-top: 40px; }
+.info-box { margin-top: 20px; padding: 20px; background: var(--cream); border-left: 4px solid var(--gold); }
+.timing-card, .location-card { background: var(--forest-green); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; }
+.timing-card h3, .location-card h3 { color: var(--gold); margin-bottom: 10px; }
+
+/* Specialties Grid Fix */
+.specialties { padding: 80px 5%; }
+.section-title { text-align: center; margin-bottom: 40px; }
+.section-title span { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
+.section-title h2 { font-size: 2.8rem; margin-top: 5px; }
+
+.spec-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns */
+    gap: 20px; 
+}
+.spec-card { 
+    background: white; padding: 30px 20px; text-align: center; 
+    text-decoration: none; color: inherit; border: 1px solid #eee; transition: 0.3s;
+    display: flex; flex-direction: column; align-items: center;
+}
+.spec-card i { font-size: 2.5rem; color: var(--gold); margin-bottom: 15px; }
+.spec-card h3 { margin-bottom: 10px; }
+.spec-card:hover { background: var(--forest-green); color: white; transform: translateY(-5px); }
+.read-more { margin-top: auto; padding-top: 15px; color: var(--gold); font-weight: 600; font-size: 0.8rem; }
+
+/* Doctors Section Responsive */
+.doctors { padding: 80px 5%; background: #f4f1ea; }
+.doc-wrapper { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.doc-card { 
+    background: white; display: flex; width: 100%; max-width: 500px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); overflow: hidden; border-radius: 10px; 
+}
+.doc-img { flex: 0 0 40%; }
+.doc-img img { width: 100%; height: 100%; object-fit: cover; }
+.doc-info { padding: 25px; flex: 1; }
+.consult-btn { display: block; margin-top: 15px; background: var(--forest-green); color: white; padding: 10px; text-align: center; text-decoration: none; border-radius: 5px; }
+
+/* Gallery Section Header */
+.gallery {
+    padding: 60px 5%;
+    background: var(--cream);
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between; /* Pushes title left and button right */
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Gallery Title Styling */
+.gallery-header h2 {
+    font-size: 2.5rem;
+    color: var(--forest-green);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* View All Photos Button (Image 2 style) */
+.view-pill {
+    background-color: #1B4332; /* Dark Forest Green */
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 50px; /* Makes it a pill shape */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+}
+
+.view-pill:hover {
+    background-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Mosaic Grid & Image Styling */
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    grid-auto-rows: 250px;
+}
+
+.m-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 15px; /* Adds rounded corners like in Image 2 */
+    transition: transform 0.3s ease;
+}
+
+.m-item img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments for the header */
+@media (max-width: 480px) {
+    .gallery-header {
+        flex-direction: row; /* Keeps them side by side even on small mobile */
+    }
+    .gallery-header h2 {
+        font-size: 1.8rem;
+    }
+    .view-pill {
+        padding: 8px 15px;
+        font-size: 0.75rem;
+    }
+}
+/* Testimonial Grid */
+/* Testimonial Section Styles */
+.testimonials {
+    padding: 80px 5%;
+    background-color: var(--cream);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+    color: var(--forest-green);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: auto; /* Pushes name to the bottom of the card */
+    border-left: 3px solid var(--gold);
+    padding-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    .testimonial-card {
+        padding: 20px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Blogs Section */
+.blogs {
+    padding: 80px 5%;
+    background-color: #f9f9f9;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns on laptop */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-post-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Soft deep shadow from image */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-post-img {
+    width: 100%;
+    height: 220px;
+}
+
+.blog-post-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-post-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-post-content h3 {
+    font-size: 1.25rem;
+    color: #1B4332; /* Blue color from image */
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.post-read-more {
+    font-size: 0.85rem;
+    color: #1B4332;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.post-read-more:hover {
+    text-decoration: underline;
+}
+
+/* Bottom Centered Read More */
+.blog-footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.main-read-more {
+    font-size: 1.5rem;
+    color: #1B4332;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.main-read-more:hover {
+    color: var(--gold);
+}
+
+/* Responsive Blog Grid */
+@media (max-width: 992px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-grid {
+        grid-template-columns: 1fr; /* 1 Column on Mobile */
+    }
+    .blog-post-img {
+        height: 200px;
+    }
+}
+/* Lightbox Centering Fix */
+.lightbox { 
+    display: none; position: fixed; z-index: 2000; top: 0; left: 0; 
+    width: 100%; height: 100%; background: rgba(0,0,0,0.9); 
+    justify-content: center; align-items: center; 
+}
+.lightbox-wrapper { position: relative; width: 90%; height: 90%; display: flex; justify-content: center; align-items: center; }
+.lightbox-content { max-width: 100%; max-height: 100%; object-fit: contain; border: 3px solid var(--gold); }
+.close-lightbox { position: absolute; top: 20px; right: 20px; color: white; font-size: 40px; cursor: pointer; z-index: 2001; }
+
+/* Stats Bar */
+.stats-bar { display: flex; flex-wrap: wrap; justify-content: space-around; background: var(--forest-green); padding: 40px 5%; color: var(--gold); text-align: center; gap: 20px; }
+
+/* Mobile Menu */
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.hamburger span { width: 25px; height: 3px; background: white; }
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .spec-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-text-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links { 
+        position: fixed; top: var(--nav-height); right: -100%; width: 100%; 
+        height: 100vh; background: var(--forest-green); flex-direction: column; 
+        align-items: center; padding-top: 50px; transition: 0.3s; 
+    }
+    .nav-links.active { right: 0; }
+    .nav-links a { margin: 20px 0; font-size: 1.1rem; }
+    
+    .spec-grid { grid-template-columns: 1fr; }
+    .doc-card { flex-direction: column; }
+    .doc-img { flex: 0 0 250px; }
+    .mosaic-grid { grid-template-columns: repeat(2, 1fr); }
+    .logo-text { font-size: 1rem; }
+}
+
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; z-index: 1500; }
+.footer { padding: 20px; text-align: center; background: var(--forest-green); color: white; }
+/* Facilities Section Styling */
+.facilities-section {
+    padding: 80px 5%;
+    background-color: var(--white);
+}
+
+.facilities-banner {
+    background: var(--forest-green);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 4px solid var(--gold);
+    text-align: center;
+}
+
+.banner-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.banner-item i {
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.banner-item p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.banner-divider {
+    width: 1px;
+    height: 50px;
+    background: rgba(197, 160, 89, 0.3);
+}
+
+.treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.treatment-category {
+    background: var(--cream);
+    padding: 30px;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.treatment-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.treatment-category h3 {
+    color: var(--forest-green);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.treatment-category h3 i {
+    margin-right: 10px;
+    color: var(--gold);
+}
+
+.treatment-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.treatment-category ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+    color: #444;
+}
+
+.treatment-category ul li::before {
+    content: "•";
+    color: var(--gold);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.appointment-cta {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cta-box {
+    display: inline-block;
+    padding: 20px 40px;
+    border: 2px dashed var(--gold);
+    border-radius: 50px;
+}
+
+.cta-box p {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--forest-green);
+}
+
+.phone-link {
+    font-size: 1.8rem;
+    color: var(--forest-green);
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Cormorant Garamond', serif;
+    transition: 0.3s;
+}
+
+.phone-link:hover {
+    color: var(--gold);
+}
+
+/* Responsive for Facilities */
+@media (max-width: 992px) {
+    .treatments-grid { grid-template-columns: 1fr 1fr; }
+    .facilities-banner { flex-direction: column; gap: 20px; }
+    .banner-divider { display: none; }
+}
+
+@media (max-width: 600px) {
+    .treatments-grid { grid-template-columns: 1fr; }
+    .phone-link { font-size: 1.4rem; }
+}
+/* Custom Styles for Pediatrics Section within Home */
+.check-list-custom {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list-custom li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #444;
+}
+
+.check-list-custom i {
+    color: var(--gold);
+    margin-right: 10px;
+}
+
+.column-title {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--forest-green);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.column-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.benefits-prevention-grid .info-box li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Ensure responsive stacking for the new grid */
+@media (max-width: 768px) {
+    .benefits-prevention-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+/* Highlighted Swarnaprashana Dates Section */
+.swarnaprashana-dates {
+    margin: 40px 0;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(183, 149, 85, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Red "Important" Badge */
+.swarnaprashana-dates::before {
+    content: "IMPORTANT DATES";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #d90429; /* Alert Red */
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-bottom-left-radius: 10px;
+    letter-spacing: 1px;
+}
+
+.swarnaprashana-dates h3 {
+    color: var(--forest-green);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.swarnaprashana-dates ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.swarnaprashana-dates li {
+    background: var(--forest-green);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--gold);
+    transition: transform 0.3s ease;
+}
+
+.swarnaprashana-dates li:hover {
+    transform: scale(1.03);
+}
+
+.swarnaprashana-dates li strong {
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+.swarnaprashana-dates li span {
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+@media (max-width: 600px) {
+    .swarnaprashana-dates li {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}

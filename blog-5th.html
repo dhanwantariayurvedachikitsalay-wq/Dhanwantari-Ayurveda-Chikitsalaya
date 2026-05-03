@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet & Nutrition (Ahara) | Dhanwantari Ayurveda Chikitsalaya</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --forest-green: #1B4332;
+            --gold: #B79555;
+            --cream: #F9F7F2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--forest-green); line-height: 1.8; }
+
+        /* Hero Section */
+        .detail-hero {
+            height: 65vh;
+            background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(27, 67, 50, 0.7)), 
+                        url('image/28.jpg'); /* Recommended: Image of healthy Ayurvedic herbs/food */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .detail-hero-content h1 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 4.5rem; 
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .detail-hero-content p { 
+            font-size: 1.1rem; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        /* Content Container */
+        .detail-content {
+            padding: 80px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Back Link */
+        .back-link {
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Main Serif Heading */
+        .main-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            color: var(--forest-green);
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            color: #444;
+        }
+
+        /* Content Paragraphs */
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .point-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--forest-green);
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .point-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .content-section p, .content-section li {
+            font-size: 1.15rem;
+            color: #444;
+            margin-top: 25px;
+            text-align: justify;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-section ul li {
+            margin-top: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .content-section ul li::before {
+            content: '🌿';
+            font-size: 0.9rem;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Dosha Grid */
+        .routine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .routine-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .routine-item strong { 
+            color: var(--forest-green); 
+            display: block; 
+            margin-bottom: 10px; 
+            font-size: 1.4rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Conclusion Box */
+        .conclusion-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--gold);
+            margin-top: 80px;
+        }
+
+        .conclusion-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--forest-green);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer {
+            padding: 40px;
+            text-align: center;
+            background: var(--forest-green);
+            color: white;
+            margin-top: 80px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .detail-hero-content h1 { font-size: 3rem; }
+            .main-heading { font-size: 2.5rem; }
+            .detail-content { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="detail-hero">
+        <div class="detail-hero-content">
+            <h1>Ahara: Diet & Nutrition</h1>
+            <p>The Foundation of Health in Ayurveda</p>
+        </div>
+    </section>
+
+    <div class="detail-content">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <h2 class="main-heading">Food as Medicine</h2>
+        <p class="intro-text">
+            In Ayurveda, Ahara (Diet) is considered one of the three pillars of health, alongside sleep and lifestyle. Food is not just fuel—it is medicine. The right diet helps maintain balance in the body’s energies, improves digestion, and prevents diseases before they begin.
+        </p>
+
+        <!-- 1 -->
+        <div class="content-section">
+            <h3 class="point-title">1. Importance of Ahara</h3>
+            <p>
+                Ayurveda emphasizes a profound truth: <strong>“You are what you digest, not just what you eat.”</strong> Proper digestion leads to the nourishment of tissues (Dhatus) and the formation of vital energy (Ojas), which supports your immunity and overall vitality.
+            </p>
+        </div>
+
+        <!-- 2 -->
+        <div class="content-section">
+            <h3 class="point-title">2. The Concept of Agni (Digestive Fire)</h3>
+            <p>
+                Agni is responsible for digestion and metabolism. A strong Agni leads to good health, while a weak Agni results in the accumulation of toxins (Ama). To maintain a healthy Agni, follow these practices:
+            </p>
+            <ul>
+                <li>Eat warm, freshly cooked meals.</li>
+                <li>Avoid overeating or undereating.</li>
+                <li>Maintain regular meal timings.</li>
+                <li>Use digestive spices like ginger, cumin, and turmeric.</li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="content-section">
+            <h3 class="point-title">3. Eating According to Your Dosha</h3>
+            <p>Tailoring your diet to your specific energy type is essential for internal harmony:</p>
+            <div class="routine-grid">
+                <div class="routine-item">
+                    <strong>🌬️ Vata (Air + Space)</strong>
+                    Prefer warm, moist, and grounding foods. 
+                    <br><br>
+                    <em>Best:</em> Rice, milk, ghee, cooked vegetables.
+                    <br><em>Avoid:</em> Cold, dry, raw foods.
+                </div>
+                <div class="routine-item">
+                    <strong>🔥 Pitta (Fire + Water)</strong>
+                    Prefer cooling and soothing foods.
+                    <br><br>
+                    <em>Best:</em> Fruits, leafy greens, coconut, milk.
+                    <br><em>Avoid:</em> Spicy, oily, fried foods.
+                </div>
+                <div class="routine-item">
+                    <strong>🌱 Kapha (Earth + Water)</strong>
+                    Prefer light, warm, and dry foods.
+                    <br><br>
+                    <em>Best:</em> Millets, legumes, spices.
+                    <br><em>Avoid:</em> Heavy, oily, sweet foods.
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="content-section">
+            <h3 class="point-title">4. Ayurvedic Eating Habits (Ahara Vidhi)</h3>
+            <p>How you eat is as important as what you eat. Cultivate these habits for better absorption:</p>
+            <ul>
+                <li>Eat only when you feel true hunger.</li>
+                <li>Eat in a calm and peaceful environment.</li>
+                <li>Chew food properly to aid the digestive process.</li>
+                <li>Avoid distractions like mobile phones or TV while eating.</li>
+                <li>Do not sleep immediately after meals.</li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="content-section">
+            <h3 class="point-title">5. The Three Gunas of Food</h3>
+            <p>Ayurveda classifies food into three categories based on how they affect the mind:</p>
+            <ul>
+                <li><strong>Sattvic (Pure & Balanced):</strong> Fruits, vegetables, grains, nuts. Promotes clarity and peace.</li>
+                <li><strong>Rajasic (Stimulating):</strong> Spicy, salty, fried foods. Increases activity and restlessness.</li>
+                <li><strong>Tamasic (Heavy):</strong> Processed or stale food. Causes lethargy and dullness.</li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="content-section">
+            <h3 class="point-title">6. Seasonal Diet (Ritucharya)</h3>
+            <p>Ayurveda recommends adjusting your intake according to the natural cycles of the year:</p>
+            <ul>
+                <li><strong>Summer:</strong> Focus on cooling foods like buttermilk and hydrating fruits.</li>
+                <li><strong>Winter:</strong> Opt for warm, nourishing foods like ghee and hearty soups.</li>
+                <li><strong>Rainy Season:</strong> Stick to light, easily digestible foods.</li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="content-section">
+            <h3 class="point-title">7. Food as Natural Remedy</h3>
+            <p>Incorporate these healing ingredients into your daily diet:</p>
+            <ul>
+                <li><strong>Ginger:</strong> Improves digestion and clears toxins.</li>
+                <li><strong>Turmeric:</strong> Potent anti-inflammatory and blood purifier.</li>
+                <li><strong>Honey:</strong> Natural sweetener that boosts immunity.</li>
+                <li><strong>Ghee:</strong> Enhances memory and strengthens the digestive fire.</li>
+            </ul>
+        </div>
+
+        <!-- Conclusion Box -->
+        <div class="conclusion-card">
+            <h3>🌟 Final Thoughts</h3>
+            <p>
+                In Ayurveda, diet is the foundation of health. By eating mindfully, choosing foods according to your body type, and maintaining strong digestion, you can achieve balance, prevent diseases, and live a vibrant, healthier life. Start your journey toward nutritional harmony today.
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dhanwantari Ayurveda Chikitsalaya. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

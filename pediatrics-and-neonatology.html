@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatrics & Neonatology | Dhanwantari Ayurveda Chikitsalaya</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Tick Marks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --forest-green: #1B4332;
+            --gold: #B79555;
+            --cream: #F9F7F2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--forest-green); line-height: 1.8; }
+
+        /* Hero Section */
+        .detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(27,67,50,0.7), rgba(27,67,50,0.7)), url('image/p.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .detail-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; }
+
+        /* Content Container */
+        .detail-content {
+            padding: 80px 10%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        /* Two Column Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        .intro-section {
+            margin-bottom: 60px;
+        }
+
+        .intro-section h2, .column-title {
+            color: var(--forest-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .intro-section h2::after, .column-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .intro-section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #2d5a44;
+        }
+
+        /* LIST STYLE */
+        .check-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 40px; 
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+            display: flex;
+            align-items: center;
+        }
+
+        .check-list li::before {
+            content: "\f00c"; 
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background-color: var(--gold);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        /* Prevention Box Style */
+        .info-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--gold);
+            margin-top: 40px;
+        }
+
+        .info-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--forest-green);
+        }
+
+        .age-tag {
+            display: inline-block;
+            background: var(--forest-green);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        .footer {
+            padding: 40px;
+            text-align: center;
+            background: var(--forest-green);
+            color: white;
+            margin-top: 60px;
+        }
+
+        /* Image Styling */
+        .side-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 20px 20px 0px rgba(183, 149, 85, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .content-grid { grid-template-columns: 1fr; gap: 40px; }
+            .detail-hero h1 { font-size: 3rem; }
+            .detail-content { padding: 60px 5%; }
+            .side-image { height: 350px; }
+            .check-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="detail-hero">
+        <div>
+            <h1>Pediatrics & Neonatology</h1>
+            <p>Compassionate Ayurvedic Care for the Next Generation</p>
+        </div>
+    </section>
+
+    <div class="detail-content">
+        <a href="index.html#specialties" class="back-link">← Back to Specialties</a>
+        
+        <!-- CORE TREATMENTS SECTION -->
+        <div class="intro-section">
+            <h2>Core Treatments</h2>
+            <ul class="check-list">
+                <li>Treatments for delayed milestones</li>
+                <li>Comprehensive child care (0-16 years)</li>
+                <li>Auto-immune diseases</li>
+                <li>Swarnaprashana administration</li>
+            </ul>
+        </div>
+
+        <!-- SWARNAPRASHANA DESCRIPTION -->
+        <div class="content-grid">
+            <div class="col order-mobile-2">
+                <h2 class="column-title">Swarnaprashana</h2>
+                <p><strong>An Immunity Booster and Brain Development Formula</strong></p>
+                <p>
+                    Suvarnaprashana is a well-known Ayurvedic formulation recognized for its powerful immunizing properties. It is a safe and natural preparation that supports the overall growth and development of children.
+                </p>
+                <p>
+                    This formulation contains purified gold in a bioavailable form, combined with traditional Ayurvedic ingredients known for enhancing immunity and promoting brain function.
+                </p>
+                <p>
+                    For maximum effectiveness, Suvarnaprashana is traditionally administered on the day of Pushya Nakshatra each month.
+                </p>
+            </div>
+            <div class="col order-mobile-1">
+                <img src="image/s.jpeg" alt="Child Health and Wellness" class="side-image">
+            </div>
+        </div>
+
+        <!-- NEW BENEFITS SECTION FROM IMAGE -->
+        <div class="benefits-section">
+            <h2 class="column-title">Benefits of Suvarnaprashana</h2>
+            <ul class="check-list">
+                <li>Increases intelligence, digestive power, and physical strength</li>
+                <li>Acts as a longevity enhancer and health protector</li>
+                <li>Invigorates the nervous system with Gold & Ghee</li>
+                <li>Increases natural skin radiance</li>
+                <li>Significantly improves memory power</li>
+                <li>Boosts immunity against seasonal diseases</li>
+            </ul>
+
+            <!-- PREVENTION BOX -->
+            <div class="info-box">
+                <h3>Prevention of Common Childhood Problems:</h3>
+                <ul class="check-list">
+                    <li>Recurring cold, cough, fever, and asthma</li>
+                    <li>Digestive issues like vomiting and diarrhea</li>
+                    <li>Lack of concentration in studies</li>
+                    <li>Bedwetting</li>
+                    <li>Skin related ailments</li>
+                </ul>
+                
+                <div class="age-tag">
+                    <i class="fa-solid fa-calendar-check" style="margin-right: 10px;"></i>
+                    Age: Recommended from birth until 10-16 years
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dhanwantari Ayurveda Chikitsalaya. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

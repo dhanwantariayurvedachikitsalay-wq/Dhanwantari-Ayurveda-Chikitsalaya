@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gynecology | Dhanwantari Ayurveda Chikitsalaya</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for the Tick Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --forest-green: #1B4332;
+            --gold: #C5A059;
+            --cream: #F9F7F2;
+            --white: #ffffff;
+            --transition: 0.4s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: var(--cream); 
+            color: var(--forest-green); 
+            line-height: 1.6; 
+        }
+
+        /* Navbar */
+        .navbar { 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000; 
+            padding: 1rem 8%; 
+            background: rgba(27, 67, 50, 0.98); 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--gold);
+        }
+        .logo-text { 
+            color: var(--gold); 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 1.5rem; 
+            font-weight: 700; 
+        }
+        .back-home {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+        .back-home:hover { color: var(--gold); }
+
+        /* Hero Section */
+        .detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(27,67,50,0.7), rgba(27,67,50,0.7)), 
+                        url('image/G.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+        .detail-hero h1 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 4rem; 
+            margin-bottom: 10px;
+        }
+
+        /* Content Container */
+        .detail-content {
+            padding: 80px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 40px;
+        }
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* TWO COLUMN GRID */
+        .specialty-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 60px;
+            align-items: start;
+        }
+
+        .column-title {
+            color: var(--forest-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .column-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        /* CUSTOM TICK LIST */
+        .tick-list {
+            list-style: none;
+        }
+
+        .tick-list li {
+            position: relative;
+            padding-left: 45px;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            min-height: 30px;
+        }
+
+        /* The Circle with Tick */
+        .tick-list li::before {
+            content: '\f058'; /* FontAwesome Circle-Check */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            font-size: 1.6rem;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px;
+            text-align: center;
+            background: var(--forest-green);
+            color: white;
+            margin-top: 60px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .specialty-grid {
+                grid-template-columns: 1fr; /* Stack to 1 column on tablets/phones */
+                gap: 40px;
+            }
+            .detail-hero h1 { font-size: 3rem; }
+            .detail-content { padding: 50px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="detail-hero">
+        <div>
+            <h1>Gynecology</h1>
+            <p>Comprehensive Ayurvedic Care for Women's Wellness</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="detail-content">
+        <div class="breadcrumb">
+            <a href="index.html#specialties">← Back to Specialties</a>
+        </div>
+
+        <div class="specialty-grid">
+            
+            <!-- Column 1: Facilities -->
+            <div class="col">
+                <h2 class="column-title">Facilities We Provide</h2>
+                <ul class="tick-list">
+                    <li>Preconceptional care in Ayurveda</li>
+                    <li>Irregular menstrual cycles</li>
+                    <li>Hormonal imbalances</li>
+                    <li>PCOS / PCOD</li>
+                    <li>Obesity leading to subfertility</li>
+                    <li>Perimenopausal disorders like (Osteoporosis, DUB, Mood swings, Low back ache)</li>
+                    <li>Dealing with menopause, Low back ache</li>
+                    <li>Sexual dysfunction management (Erectile dysfunction, Premature ejaculation)</li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Garbhini Paricharya -->
+            <div class="col">
+                <h2 class="column-title">Comprehensive Ayurvedic antenatal care</h2>
+                <ul class="tick-list">
+                    <li>A comprehensive Ayurvedic antenatal care (ANC) as per classics for the healthy progeny</li>
+                    <li>Masanumasika Pathya (Monthly regimen)</li>
+                    <li>Month-wise antenatal checkups</li>
+                    <li>Preparation for childbirth (Sukha Prasava)</li>
+                    <li>Postnatal care (Dietary & Lifestyle)</li>
+                        <ul>
+                            <li>Restore health</li>
+                            <li>Promote lactation</li>
+                            <li>Ensure long term well being</li>
+                        </ul>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dhanwantari Ayurveda Chikitsalaya. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
